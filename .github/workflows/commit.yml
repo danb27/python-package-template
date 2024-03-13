@@ -1,0 +1,11 @@
+name: Commit Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  call-poetry-pytest-workflow:
+    uses: danb27/reusable-actions/.github/workflows/poetry-pytest-precommit.yml@dev
