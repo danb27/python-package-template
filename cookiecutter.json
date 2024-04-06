@@ -1,0 +1,8 @@
+{
+  "package_name": "example_package",
+  "version": "0.1.0",
+  "description": "An example package",
+  "author_name": "Your Name",
+  "author_email": "you@example.com",
+  "python_version": "3.11"
+}
