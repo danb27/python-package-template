@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "example-package"
-version = "0.1.0"
-description = "example_description"
-authors = ["dan <danbianchini@outlook.com>"]
+name = "{{cookiecutter.package_name}}"
+version = "{{cookiecutter.version}}"
+description = "{{cookiecutter.description}}"
+authors = ["{{cookiecutter.author_name}} <{{cookiecutter.author_email}}>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^{{cookiecutter.python_version}}"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^8.1.1"
