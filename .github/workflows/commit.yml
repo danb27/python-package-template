@@ -4,4 +4,4 @@ on: push
 
 jobs:
   pytest-precommit-workflow:
-    uses: danb27/reusable-actions/.github/workflows/pytest-precommit.yml@dev
+    uses: danb27/reusable-actions/.github/workflows/pytest-precommit.yml@main

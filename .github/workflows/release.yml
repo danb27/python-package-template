@@ -12,5 +12,5 @@ permissions:
 
 jobs:
   push-code-artifact:
-    uses: danb27/reusable-actions/.github/workflows/push-code-artifact.yml@dev
+    uses: danb27/reusable-actions/.github/workflows/push-code-artifact.yml@main
     secrets: inherit
