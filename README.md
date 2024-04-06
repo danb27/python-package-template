@@ -1,9 +1,6 @@
 # Python Package Template
 A cookiecutter template for creating a Python package fully equipped with CI/CD and testing so that you can worry about making something awesome.
 
-### Links
-- [actions](https://github.com/danb27/reusable-actions)
-
 ### Technologies used in this template
 Of course, you are free to remove or add any technologies you want. This is just a starting point.
 
@@ -12,8 +9,7 @@ Of course, you are free to remove or add any technologies you want. This is just
 - [Pytest](https://docs.pytest.org/en/stable/) for testing
 - [pre-commit](https://pre-commit.com/) for code linting and formatting
 - [AWS CodeArtifact](https://aws.amazon.com/codeartifact/) for uploading packages
-
-I would welcome any help on making this template better.
+- [cruft](https://cruft.github.io/cruft/) for keeping your package up to date with this template
 
 ### Usage
 1. Install [Cookiecutter](https://cookiecutter.readthedocs.io/en/stable/README.html#installation)

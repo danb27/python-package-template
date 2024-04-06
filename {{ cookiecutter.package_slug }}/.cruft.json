@@ -1,0 +1,16 @@
+{
+  "template": "https://github.com/danb27/python-package-template",
+  "commit": "3f93aae7dbbe4247fe4e4f33cc0c758fe456e264",
+  "context": {
+    "cookiecutter": {
+      "package_name": "{{ cookiecutter.package_name }}",
+      "package_slug": "{{ cookiecutter.package_slug }}",
+      "package_title": "{{ cookiecutter.package_title }}",
+      "package_description": "{{ cookiecutter.package_description }}",
+      "author_name": "{{ cookiecutter.author_name }}",
+      "author_email": "{{ cookiecutter.author_email }}",
+      "line_length": "{{ cookiecutter.line_length }}"
+    }
+  },
+  "skip": []
+}

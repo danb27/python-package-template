@@ -1,0 +1,25 @@
+name: Update Cruft Commit ID
+
+on: [push]
+
+jobs:
+  update-cruft:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+
+      - name: Update .cruft.json with latest commit ID
+        run: |
+          CRUFT_FILE="./{{ cookiecutter.package_slug }}/.cruft.json"
+          
+          # Update the commit ID in the .cruft.json file
+          jq --arg commit "$GITHUB_SHA" '.commit = $commit' "$CRUFT_FILE" > temp.json && mv temp.json "$CRUFT_FILE"
+          
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "GitHub Actions Bot"
+          git add "$CRUFT_FILE"
+          git commit -m "Automatically update .cruft.json with latest commit ID"
+          git push
