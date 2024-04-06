@@ -7,3 +7,5 @@ __pycache__/
 .idea/
 .coverage
 .pytest_cache/
+
+{{ cookiecutter.package_slug }}/poetry.lock

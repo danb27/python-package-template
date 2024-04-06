@@ -5,5 +5,3 @@ on: push
 jobs:
   pytest-precommit-workflow:
     uses: danb27/reusable-actions/.github/workflows/test.yml@main
-    with:
-      run_pre_commit: false
