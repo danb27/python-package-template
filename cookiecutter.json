@@ -1,0 +1,9 @@
+{
+  "package_name": "example-package",
+  "package_slug": "{{ cookiecutter.package_name.lower().replace('-', '_') }}",
+  "package_title": "{{ cookiecutter.package_name.replace('-', ' ').replace('_', ' ').title() }}",
+  "package_description": "{{ cookiecutter.package_title }}",
+  "author_name": "dan",
+  "author_email": "danbianchini@outlook.com",
+  "line_length": 120
+}

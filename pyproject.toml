@@ -1,123 +1,22 @@
 [tool.poetry]
-name = "example-package"
+name = "python-package-template"
 version = "0.1.0"
-description = "example_description"
+description = "Cookiecutter Python Package Template"
 authors = ["dan <danbianchini@outlook.com>"]
+license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.9"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^8.1.1"
-pytest-cov = "^4.1.0"
-pytest-asyncio = "^0.23.5"
-
-[tool.poetry.group.dev.dependencies]
-pre-commit = "^3.6.2"
-
-
-[[tool.poetry.source]]
-name = "mypypi"
-url = "https://daninthreecolors-356741537667.d.codeartifact.us-west-2.amazonaws.com/pypi/mypypi/simple/"
-priority = "supplemental"
+cookiecutter = "^2.6.0"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
-addopts = [
-    "--cov=example_package"
-]
 pythonpath = "."
 testpaths = "tests/"
-
-[tool.mypy]
-python_version = "3.9"
-explicit_package_bases = true
-
-[tool.ruff]
-line-length = 120
-show-fixes = true
-src = ["example_package"]
-target-version = "py311"
-
-[tool.ruff.lint]
-ignore-init-module-imports = true
-select = [
-    "A",    # Builtins
-    "ANN",  # Annotations
-    "ARG",  # Unused arguments
-    "B",    # Bugbear
-    "BLE",  # Blind except
-    "C4",   # Comprehensions
-    "C90",  # mccabe
-    "COM",  # Commas
-    "D1",   # Undocumented public elements
-    "D2",   # Docstring conventions
-    "D3",   # Triple double quotes
-    "D4",   # Docstring text format
-    "DTZ",  # Datetimes
-    "EM",   # Error messages
-    "ERA",  # Commented-out code
-    "EXE",  # Executable
-    "F",    # Pyflakes
-    "FA",   # __future__ annotations
-    "FLY",  # F-strings
-    "G",    # Logging format
-    "I",    # Isort
-    "ICN",  # Import conventions
-    "INP",  # Disallow PEP-420 (Implicit namespace packages)
-    "INT",  # gettext
-    "ISC",  # Implicit str concat
-    "N",    # PEP-8 Naming
-    "NPY",  # Numpy
-    "PERF", # Unnecessary performance costs
-    "PGH",  # Pygrep hooks
-    "PIE",  # Unnecessary code
-    "PL",   # Pylint
-    "PT",   # Pytest
-    "PTH",  # Use Pathlib
-    "PYI",  # Stub files
-    "Q",    # Quotes
-    "RET",  # Return
-    "RUF",  # Ruff
-    "RSE",  # Raise
-    "S",    # Bandit
-    "SIM",  # Code simplification
-    "SLF",  # Private member access
-    "SLOT", # __slots__
-    "T10",  # Debugger
-    "T20",  # Print
-    "TCH",  # Type checking
-    "TID",  # Tidy imports
-    "TRY",  # Exception handling
-    "UP",   # Pyupgrade
-    "W",    # Warnings
-    "YTT",  # sys.version
-]
-ignore = [
-    "D203",    # One blank line before class docstring
-    "D212",    # Multi-line summary first line
-    "PLR0913", # Too many arguments
-    "Q000",    # Single quotes found but double quotes preferred
-]
-
-[tool.ruff.format]
-docstring-code-format = false
-docstring-code-line-length = "dynamic"
-
-# imitate black
-quote-style = "double"
-indent-style = "space"
-skip-magic-trailing-comma = false
-line-ending = "auto"
-
-[tool.ruff.lint.per-file-ignores]
-# https://beta.ruff.rs/docs/rules/
-"__init__.py" = ["F401"]
-"tests/*" = ["ANN", "ARG", "S101", "INP001", "D"]
-
-[tool.ruff.lint.flake8-tidy-imports]
-ban-relative-imports = "all"
