@@ -1,6 +1,6 @@
 {
   "template": "https://github.com/danb27/python-package-template",
-  "commit": "1786d3dfdd969205aad50a746bb055289fa20111",
+  "commit": "9ce10fd7e12e6c1d66ce1880b4509aa591160271",
   "context": {
     "cookiecutter": {
       "package_name": "{{ cookiecutter.package_name }}",
