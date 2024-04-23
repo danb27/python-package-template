@@ -13,7 +13,7 @@ jobs:
 
       - name: Update .cruft.json with latest commit ID
         run: |
-          CRUFT_FILE="./{{ cookiecutter.package_slug }}/.cruft.json"
+          CRUFT_FILE="./{{ cookiecutter.package_name }}/.cruft.json"
           
           # Update the commit ID in the .cruft.json file
           jq --arg commit "$GITHUB_SHA" '.commit = $commit' "$CRUFT_FILE" > temp.json && mv temp.json "$CRUFT_FILE"
