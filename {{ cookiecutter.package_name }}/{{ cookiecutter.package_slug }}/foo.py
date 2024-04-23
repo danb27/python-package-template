@@ -1,4 +1,4 @@
-"""Example module for the example_package."""
+"""Example module for the {{ cookiecutter.package_name }}."""
 
 
 def bar() -> int:

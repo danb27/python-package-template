@@ -8,4 +8,4 @@ __pycache__/
 .coverage
 .pytest_cache/
 
-{{ cookiecutter.package_slug }}/poetry.lock
+{{ cookiecutter.package_name }}/poetry.lock
